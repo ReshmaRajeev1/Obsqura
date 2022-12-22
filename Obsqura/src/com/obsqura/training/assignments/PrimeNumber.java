@@ -5,17 +5,29 @@ import java.util.Scanner;
 public class PrimeNumber {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your number limit");
 		int value = sc.nextInt();
-		String result = null;
-		for (int i = 2; i <= 9; i++) {
-			if (value % i == 0 && value!=i) {
-				result = "It is not a prime";
-				break;
-			} else {
-				result = "It is a prime";
-			}
-		}
-		System.out.println(result);
+		printPrime(value);
+
 	}
 
+	public static boolean primeOrNot(int i) {
+		for (int j = 2; j <= 9; j++) {
+			if (i % j == 0 && i != j) {
+				return false;
+			}
+				
+		}
+		return true;
+	}
+
+	public static void printPrime(int N) {
+		System.out.println(2);
+		for (int i = 3; i < N; i++) {
+			if(primeOrNot(i)) {
+				System.out.println(i);
+			}
+		}
+
+	}
 }

@@ -4,7 +4,7 @@ public abstract class College {
 
 	abstract void countOf(int n);//abstract method
 	void display() {
-		System.out.println(s);
+		
 		System.out.println("Details printing"); // concrete method
 	}
 	
